@@ -1,0 +1,12 @@
+2017-09-28 11:11:07,862[ABSOLUTE]  INFO Parse cli
+2017-09-28 11:11:07,863[ABSOLUTE]  INFO Parse cli's using JCommander
+2017-09-28 11:11:07,900[ABSOLUTE]  INFO Start app...
+2017-09-28 11:11:08,151[ABSOLUTE]  INFO Suit started : C:\Users\Tatiana_Ermolitskaya\Documents\l13\src\main\resources\testng.xml
+2017-09-28 11:11:08,151[ABSOLUTE]  INFO [TEST STARTED] : mail test
+2017-09-28 11:11:14,994[ABSOLUTE] DEBUG [Browser was opened]
+2017-09-28 11:11:14,995[ABSOLUTE] DEBUG Trying to log in with login: juicy_j16@mail.ru, password: qazxsw123
+2017-09-28 11:11:14,998[ABSOLUTE] DEBUG Clear the element By.id: mailbox__login
+2017-09-28 11:11:15,096[ABSOLUTE] DEBUG Typing to element By.id: mailbox__login
+2017-09-28 11:11:15,192[ABSOLUTE] DEBUG Clear the element By.id: mailbox__password
+2017-09-28 11:11:15,279[ABSOLUTE] DEBUG Typing to element By.id: mailbox__password
+2017-09-28 11:11:15,339[ABSOLUTE] DEBUG Click on element By.id: mailbox__auth__button
