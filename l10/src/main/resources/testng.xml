@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="l10 suite">
+    <test name="mail test" >
+        <classes>
+            <class name="com.epam.tat.tests.mail.LoginToMailTest"/>
+            <class name="com.epam.tat.tests.mail.SendMailTest"/>
+        </classes>
+    </test>
+    <test name="cloud test">
+        <classes>
+            <class name="com.epam.tat.tests.cloud.LoginToCloudTest"/>
+            <class name="com.epam.tat.tests.cloud.CloudTest"/>
+        </classes>
+    </test>
+</suite>
