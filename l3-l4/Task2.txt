@@ -1,0 +1,174 @@
+XPath
+Google search page :
+	 
+1.	query input  
+	//input[@id='gs_htif0']
+
+2.	‘search in Google’ button
+	//input[@name='btnK']
+
+3.	“I am lucky!’ button
+	//input[@name='btnI']
+
+4.	Search for “nyan cat” and create a locator that returns ALL 10 result links (see screenshot)
+	//h3/a
+
+5.	n-th ‘o’ letter in Goooooooooogle   (n = 1...10)
+	//td[n+1]/a/span | //td[n+1]/span
+
+Mail.ru login page:	
+
+1.	login input
+	//input[@id='mailbox__login']
+
+2.	password input
+	//input[@id='mailbox__password']
+
+3.	‘Enter’ button
+	//input[@id='mailbox__auth__button']
+
+Mail.ru main page (logged in):
+
+1.	links to folders (incoming, outcoming, spam, deleted, drafts)
+	a)incoming
+	.//a[@class='b-nav__link' and @href='/messages/inbox/']
+
+	b)outcoming
+	.//a[@class='b-nav__link js-shortcut' and @href='/messages/sent/']
+
+	c)spam
+	.//a[@href='/messages/spam/']
+
+	d)deleted
+	.//a[@href='/messages/trash/']
+
+	e)drafts
+	.//a[@href='/messages/drafts/']
+
+2.	action buttons (write new letter, delete, mark as spam, mark as not spam, mark as read, move to another folder)
+	a)write new letter
+	.//a[@data-name='compose']
+
+	b)delete
+	.//div[@data-name='remove']
+
+	c)mark as spam
+	.//div[@data-name='spam']
+
+	d)mark as not spam
+	.//a[@href='/messages/spam/']
+	.//div[@data-name='noSpam']
+
+	e)mark as read
+	//i[@class='ico ico_toolbar ico_toolbar_more']/parent::div[contains(@data-title,'.')]
+	.//a[@data-name='read']
+
+	f)move to another folder
+	//i[@class='ico ico_toolbar ico_toolbar_move']/parent::div[contains(@data-title,'V')]
+	
+3.	Checkbox for one exact letter (id - id of exact letter)
+	//div[@data-id='id']/div[@class='b-checkbox__box']
+ 
+4.	Opening link for one exact letter(id - id of exact letter)
+	//a[@data-name='link' and contains(@href,'id')]
+
+5.	New letter page: inputs for address, topic, text, file attach
+	a)inputs for address
+	//input[@id='compose_to']/parent::div
+
+	b)topic
+	//input[@tabindex='7']/parent::div
+
+	c)text
+	//div[@class='compose__editor__frame']
+
+	d)file attach
+	//input[@name='Filedata']/parent::div
+
+
+CSS
+Google search page :
+	 
+1.	query input  
+	input#gs_htif0
+
+2.	‘search in Google’ button
+	input[name='btnK']
+
+3.	“I am lucky!’ button
+	input[name='btnI']
+
+4.	Search for “nyan cat” and create a locator that returns ALL 10 result links (see screenshot)
+	h3>a
+
+5.	n-th ‘o’ letter in Goooooooooogle   (n = 1...10)
+	td:nth-child(3)>a>span, td:nth-child(3)>span
+
+Mail.ru login page:	
+
+1.	login input
+	input#mailbox__login
+
+2.	password input
+	input#mailbox__password
+
+3.	‘Enter’ button
+	input#mailbox__auth__button
+
+Mail.ru main page (logged in):
+
+1.	links to folders (incoming, outcoming, spam, deleted, drafts)
+	a)incoming
+	.b-nav__link[href$='inbox/']
+
+	b)outcoming
+	.b-nav__link[href$='sent/']
+
+	c)spam
+	.b-nav__link[href$='spam/']
+
+	d)deleted
+	.b-nav__link[href$='trash/']
+
+	e)drafts
+	.b-nav__link[href$='drafts/']
+
+2.	action buttons (write new letter, delete, mark as spam, mark as not spam, mark as read, move to another folder)
+	a)write new letter
+	a[data-name='compose']
+
+	b)delete
+	div[data-name='remove']
+
+	c)mark as spam
+	div[data-name='spam']
+
+	d)mark as not spam
+	.b-nav__link[href$='spam/']
+	div[data-name='noSpam']
+
+	e)mark as read
+	div[data-title$='(.)']
+	a[data-name='read']
+
+	f)move to another folder
+	div[data-title$='(V)']
+	
+3.	Checkbox for one exact letter (id - id of exact letter)
+	div[data-id='id']>div[class='b-checkbox__box']
+ 
+4.	Opening link for one exact letter(id - id of exact letter)
+	a[data-name='link'][href$='id/']
+
+5.	New letter page: inputs for address, topic, text, file attach
+	a)inputs for address
+	input[id='compose_to']
+
+	b)topic
+	div input[name='Subject']
+
+	c)text
+	div[class='compose__editor__frame']
+
+	d)file attach
+	div[class='js-input-file compose-attachments__item']

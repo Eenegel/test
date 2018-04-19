@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HomeWork suite" parallel="classes" thread-count="3">
+    <test name="HomeWork test" >
+        <parameter name="prettyAppearance" value="true"/>
+        <groups>
+            <run>
+                <include name="Boy"/>
+                <include name="Girl"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="BoyTest"/>
+            <class name="GirlTest"/>
+            <class name="FactoryTest"/>
+            <class name="MokitoTest"/>
+        </classes>
+    </test>
+</suite>
